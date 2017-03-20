@@ -1,0 +1,2 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($data)): foreach($data as $key=>$item): if(is_array($item)): foreach($item as $key=>$v): echo ($v); ?>,<?php endforeach; endif; ?>
+ <br/><?php endforeach; endif; ?>
