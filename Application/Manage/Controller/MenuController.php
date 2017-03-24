@@ -1,5 +1,5 @@
 <?php
-namespace Home\Controller;
+namespace Manage\Controller;
 use Think\Controller;
 use Controller\BaseAdminController;
 use Dao\Bll\MenuBll;
@@ -15,7 +15,7 @@ class IndexController extends BaseAdminController {
     }
     
     /**
-     * ²Ëµ¥ÁĞ±í
+     * ï¿½Ëµï¿½ï¿½Ğ±ï¿½
      */
     public function index(){
         $data=$this->menu_bll->get();
@@ -26,14 +26,14 @@ class IndexController extends BaseAdminController {
     public function edit()
     {
         $menu_id=i('menuid');
-        $title="Ìí¼Ó";
+        $title="ï¿½ï¿½ï¿½";
         if($menu_id)
         {
-            $title="±à¼­";
+            $title="ï¿½à¼­";
             $menu=$this->menu_bll->get(["menu_id"=>$menu_id]);
             if(!$menu)
             {
-                $this->error("²ÎÊı´íÎó£¬¸ÃÊı¾İ²»´æÔÚ");
+                $this->error("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬¸ï¿½ï¿½ï¿½ï¿½İ²ï¿½ï¿½ï¿½ï¿½ï¿½");
                 exit();
             }
             $this->assign("menu",$menu);
